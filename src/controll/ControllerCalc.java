@@ -7,7 +7,7 @@ public class ControllerCalc extends Thread
 	
 	private int idThread;
 	private Semaphore pausa;
-	private int valor;
+	private double valor;
 	
 	public ControllerCalc(int i, Semaphore perm)
 	{
@@ -31,11 +31,11 @@ public class ControllerCalc extends Thread
 	
 	private void calculo()
 	{
-		valor = valor / idThread;
+		valor = 1 / (double) idThread;
 		while (valor < 1)
 		{
 			System.out.println(valor);
-			valor = valor / idThread;
+			valor = 1 / idThread;
 		}
 	}
 	
